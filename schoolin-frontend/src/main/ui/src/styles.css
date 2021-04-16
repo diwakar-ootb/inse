@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+body {
+  background-color: #efefef;
+}
+
+*,
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.85rem;
+  margin: 0px;
+  padding: 0px;
+}
+
+.content-wrapper {
+  padding: 0px;
+  margin-top: 60px;
+}
+
+textarea,
+input,
+select {
+  padding: 4px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.main-container {
+  padding: 20px;
+}
+
+.top-menu {
+  background: #38668b 0% 0% no-repeat padding-box;
+  width: 160px;
+}
+
+.top-menu-item {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  margin: 6px;
+}
+
+.box {
+  background-color: #ffffff;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.box:hover {
+  background-color: #84b712;
+}
+
+.card-no-size {
+  min-height: 80px;
+  background-color: #ffffff;
+  border: 2px solid #f0f5f9;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+}
+
+.feed-card {
+  min-height: 200px;
+  background-color: #ffffff;
+  border: 2px solid #f0f5f9;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.feed-card .header {
+  padding: 8px;
+  font-size: 24px;
+}
+.feed-card .content {
+  font-size: 14px;
+  padding: 8px;
+}
+
+.sticky-content {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80px;
+  background-color: #e2e2e2;
+  border-radius: 4px;
+  padding: 0px;
+  font-size: 14px;
+  min-height: 400px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ffffff;
+}
+
+.non-sticky-content {
+  top: 80px;
+  background-color: #e2e2e2;
+  border-radius: 4px;
+  padding: 0px;
+  font-size: 14px;
+  min-height: 400px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  border: 1px solid #ffffff;
+}
+
+.home-icon {
+  background-image: url("src/assets/images/icons/twotone_home_black_24dp.png");
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px !important;
+  outline: 0px;
+}
+
+.network-icon {
+  background-image: url("src/assets/images/icons/twotone_people_black_24dp.png");
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px !important;
+  outline: 0px;
+}
+
+.message-icon {
+  background-image: url("src/assets/images/icons/twotone_sms_black_24dp.png");
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px !important;
+  outline: 0px;
+}
+
+.notification-icon {
+  background-image: url("src/assets/images/icons/twotone_notifications_black_24dp.png");
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px !important;
+  outline: 0px;
+}
+
+.account-icon {
+  background-image: url("src/assets/images/icons/twotone_account_circle_black_24dp.png");
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px !important;
+  outline: 0px;
+}
+
+.logout-icon {
+  background-image: url("src/assets/images/icons/twotone_logout_black_24dp.png");
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px !important;
+  outline: 0px;
+}
+
+.settings-icon {
+  background-image: url("src/assets/images/icons/twotone_settings_black_24dp.png");
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px !important;
+  outline: 0px;
+}

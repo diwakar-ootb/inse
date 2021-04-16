@@ -1,0 +1,10 @@
+<div>
+  <div style="width:400px">
+    <p-progressBar [value]="progress"></p-progressBar>
+  </div>
+  <div class="p-grid p-jc-start">
+    <div class="p-col-12" *ngFor="let item of list; index as i;">
+      <div>{{item.data}}</div>
+    </div>
+  </div>
+</div>

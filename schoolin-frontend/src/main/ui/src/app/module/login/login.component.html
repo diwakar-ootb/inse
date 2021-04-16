@@ -1,0 +1,24 @@
+<div class="p-d-flex p-jc-around p-ai-center p-jc-center" style="height: calc(100vh - 120px)">
+	<p-card header="Login" subheader="Enter username and password" head [style]="{width: '360px', 'padding': '10px'}"
+		styleClass="p-card-shadow p-as-center p-shadow-5">
+		<ng-template pTemplate="header">
+		</ng-template>
+		<div class="card">
+			<div class="p-fluid">
+				<div class="p-field">
+					<label for="username">Username</label>
+					<input id="username" type="text" class="p-inputtext-lg" pInputText #username>
+				</div>
+				<div class="p-field">
+					<label for="password">Password</label>
+					<input id="password" type="password" class="p-inputtext-lg" pPassword #password feedback="false">
+				</div>
+			</div>
+		</div>
+		<ng-template pTemplate="footer">
+			<div class="p-d-flex" style="width: 100%">
+				<button pButton pRipple type="button" label="Login" (click)="auth()" style="width:100%" class="p-button-lg"></button>
+			</div>
+		</ng-template>
+	</p-card>
+</div>

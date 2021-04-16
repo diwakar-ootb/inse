@@ -1,0 +1,74 @@
+<header>
+  <div style="position: 'fixed'; top: '0px'; width: 1130px; height:62px">
+  <p-toolbar>
+    <div class="ui-toolbar-group-left">
+      <div class="logo-container" (click)="home()" style="cursor: pointer;">
+        <span class="logo-text">
+          Schoolin
+        </span>
+      </div>
+    </div>
+    <div>
+      <div style="margin-right: 10px; float: left; cursor: pointer;">
+        <i class="pi home-icon" routerLink="/s/dashboard"></i>
+      </div>
+      <div style="margin-right: 10px; float: left; cursor: pointer;">
+        <i class="pi network-icon" routerLink="/s/network"></i>
+      </div>
+      <div style="margin-right: 10px; float: left; cursor: pointer;">
+        <i class="pi message-icon" routerLink="/s/message"></i>
+      </div>
+      <div style="margin-right: 10px; float: left; cursor: pointer;">
+        <i class="pi notification-icon" routerLink="/s/notification"></i>
+      </div>
+      <div style="margin-right: 10px; float: left; cursor: pointer;">
+        <i class="pi account-icon" routerLink="/s/account"></i>
+      </div>
+</div>
+    <div class="ui-toolbar-group-right">
+      <div style="cursor: pointer;">
+        {{ "User Name" }}
+        <i
+          class="pi pi-angle-down"
+          style="cursor: pointer;"
+          (click)="op.toggle($event)"
+        ></i>
+      </div>
+      <p-overlayPanel
+        #op
+        [dismissable]="true"
+        [showCloseIcon]="false"
+        [appendTo]="'body'"
+        styleClass="top-menu"
+        [style]="{'z-index': '99999 !important'}"
+      >
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: start;
+          "
+          class="box"
+        >
+          <span class="fa fa-fw settings-icon"></span>
+          <div class="ui-g-4">Settings</div>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: start;
+          "
+          (click)="logout()"
+          class="box"
+        >
+          <span class="fa fa-fw logout-icon"></span>
+          <div class="ui-g-4">Logout</div>
+        </div>
+      </p-overlayPanel>
+    </div>
+  </p-toolbar>
+</div>
+</header>

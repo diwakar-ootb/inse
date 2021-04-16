@@ -1,0 +1,23 @@
+:host {
+  padding: 0px;
+  border-radius: 4px;
+}
+
+.custom .ui-scrollpanel-wrapper {
+  /*border-right: 9px solid #f4f4f4;*/
+}
+
+.custom .ui-scrollpanel-bar {
+  background-color: #f0f5f9;
+  color: #e2e2e2;
+  opacity: 1;
+  transition: background-color 0.3s;
+}
+
+.custom .ui-scrollpanel-bar:hover {
+  background-color: #f0f5f9;
+}
+
+.sidebar-container {
+  background-color: transparent;
+}

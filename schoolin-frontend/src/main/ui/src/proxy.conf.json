@@ -1,0 +1,12 @@
+{
+	"/webapp/*": {
+		"target": "http://localhost:5250",
+		"secure": false,
+		"pathRewrite": {
+			"^/webapp/authenticate": "/authenticate",
+			"^/webapp/rest": "/rest"
+		},
+		"logLevel": "debug",
+		"changeOrigin": true
+	}
+}

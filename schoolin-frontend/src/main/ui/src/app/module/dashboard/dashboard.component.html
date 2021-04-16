@@ -1,0 +1,44 @@
+<div>
+  <div class="sticky-content">
+    <app-sidebar fxFlex="300px">
+    </app-sidebar>
+  </div>
+</div>
+<div fxFlex class="content-wrapper">
+  <div class="content">
+    <div>
+      <div class="p-grid p-nogutter">
+        <div class="card-no-size">
+          <div>
+            <textarea rows="5" cols="30" pInputTextarea autoResize="'false'" style="width: 100%;resize: none;"></textarea>
+          </div>
+          <div class="p-d-flex p-jc-end" style="margin-top: 10px;">
+            <button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-outlined" label="Post"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="p-grid p-nogutter">
+        <div class="p-col-12" *ngFor="let item of list">
+          <div class="feed-card">
+            <div class="header">{{ item.title }}</div>
+            <div class="content">
+              <span>{{ item.description }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="non-sticky-content">
+    <app-sidebar fxFlex="300px">
+    </app-sidebar>
+  </div>
+  <div class="sticky-content">
+    <app-sidebar fxFlex="300px">
+    </app-sidebar>
+  </div>
+</div>
