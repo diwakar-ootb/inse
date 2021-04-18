@@ -12,19 +12,27 @@ body {
   padding: 0px;
 }
 
-.content-wrapper {
-  padding: 0px;
-  margin-top: 60px;
-}
-
 textarea,
 input,
 select {
   padding: 4px;
 }
 
-.content {
-  padding: 20px;
+.content-wrapper {
+  padding: 0px;
+  margin-top: 60px;
+}
+
+.main-body {
+  margin: 20px 5px 5px 5px;
+  padding: 0px 5px 5px 5px;
+}
+
+.main-body.highlight {
+  border: 1px solid #84b712;
+  padding-left: 20px;
+  background-color: #ffffff;
+  border: 2px solid #f0f5f9;
 }
 
 .main-container {
@@ -92,7 +100,7 @@ select {
   padding: 0px;
   font-size: 14px;
   min-height: 400px;
-  margin-top: 20px;
+  margin-top: 80px;
   margin-bottom: 20px;
   border: 1px solid #ffffff;
 }
@@ -110,7 +118,15 @@ select {
 }
 
 .home-icon {
-  background-image: url("src/assets/images/icons/twotone_home_black_24dp.png");
+  background-image: url("src/assets/images/icons/home_black_24dp.svg");
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px !important;
+  outline: 0px;
+}
+
+.notes-icon {
+  background-image: url("src/assets/images/icons/notes_black_24dp.svg");
   background-repeat: no-repeat;
   height: 30px;
   width: 30px !important;
@@ -118,7 +134,7 @@ select {
 }
 
 .network-icon {
-  background-image: url("src/assets/images/icons/twotone_people_black_24dp.png");
+  background-image: url("src/assets/images/icons/people_black_24dp.svg");
   background-repeat: no-repeat;
   height: 30px;
   width: 30px !important;
@@ -126,7 +142,7 @@ select {
 }
 
 .message-icon {
-  background-image: url("src/assets/images/icons/twotone_sms_black_24dp.png");
+  background-image: url("src/assets/images/icons/sms_black_24dp.svg");
   background-repeat: no-repeat;
   height: 30px;
   width: 30px !important;
@@ -134,7 +150,7 @@ select {
 }
 
 .notification-icon {
-  background-image: url("src/assets/images/icons/twotone_notifications_black_24dp.png");
+  background-image: url("src/assets/images/icons/notifications_black_24dp.svg");
   background-repeat: no-repeat;
   height: 30px;
   width: 30px !important;
@@ -142,7 +158,7 @@ select {
 }
 
 .account-icon {
-  background-image: url("src/assets/images/icons/twotone_account_circle_black_24dp.png");
+  background-image: url("src/assets/images/icons/account_circle_black_24dp.svg");
   background-repeat: no-repeat;
   height: 30px;
   width: 30px !important;
@@ -150,7 +166,7 @@ select {
 }
 
 .logout-icon {
-  background-image: url("src/assets/images/icons/twotone_logout_black_24dp.png");
+  background-image: url("src/assets/images/icons/logout_black_24dp.svg");
   background-repeat: no-repeat;
   height: 30px;
   width: 30px !important;
@@ -158,7 +174,7 @@ select {
 }
 
 .settings-icon {
-  background-image: url("src/assets/images/icons/twotone_settings_black_24dp.png");
+  background-image: url("src/assets/images/icons/settings_black_24dp.svg");
   background-repeat: no-repeat;
   height: 30px;
   width: 30px !important;

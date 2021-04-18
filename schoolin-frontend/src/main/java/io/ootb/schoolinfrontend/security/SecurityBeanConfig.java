@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import io.ootb.schoolinfrontend.util.JwtUtil;
+
 /**
  * Config beans.
  *
@@ -24,6 +26,11 @@ public class SecurityBeanConfig {
 	public JwtConfig jwtConfig() {
 		return new JwtConfig();
 	}
+	
+	@Bean
+	public JwtUtil jwtUtil(JwtConfig config) {
+		return new JwtUtil(config);
+	}
 
 	@Bean
 	public JwtUsernamePasswordAuthFilter jwtUsernamePasswordAuthFilter(JwtConfig config,
@@ -32,8 +39,8 @@ public class SecurityBeanConfig {
 	}
 
 	@Bean
-	public JwtTokenAuthFilter jwtTokenAuthFilter(JwtConfig config) {
-		return new JwtTokenAuthFilter(config);
+	public JwtTokenAuthFilter jwtTokenAuthFilter(JwtConfig config, JwtUtil jwtUtil) {
+		return new JwtTokenAuthFilter(config, jwtUtil);
 	}
 
 	@Bean("jwtTokenRealm")

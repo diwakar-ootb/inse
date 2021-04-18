@@ -14,7 +14,7 @@ public class KafkaListenerService {
 
 	@StreamListener("input-channel-1")
 	public void process(KStream<String, String> input) {
-		 
+
 		input.foreach((k, v) -> log.info(String.format("Key: %s, Value: %s", k, v)));
 	}
 }

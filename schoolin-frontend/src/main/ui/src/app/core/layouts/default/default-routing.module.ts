@@ -8,6 +8,7 @@ import { DashboardComponent } from '../../../module/dashboard/dashboard.componen
 import { NetworkComponent } from './../../../module/network/network.component';
 import { MessageComponent } from 'src/app/module/message/message.component';
 import { NotificationComponent } from 'src/app/module/notification/notification.component';
+import { NotesComponent } from 'src/app/module/notes/notes.component';
 
 const routes: Routes = [
 	{
@@ -19,6 +20,7 @@ const routes: Routes = [
       { path: 'message', component: MessageComponent },
       { path: 'notification', component: NotificationComponent },
       { path: 'account', component: AccountComponent },
+      { path: 'notes', component: NotesComponent },
       { path: 'dashboard', component: DashboardComponent },
 			{
 				path: '',

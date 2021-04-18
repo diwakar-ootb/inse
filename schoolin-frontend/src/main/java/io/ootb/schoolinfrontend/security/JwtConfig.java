@@ -23,7 +23,7 @@ public class JwtConfig {
     @Value("${shuaicj.security.jwt.prefix:Bearer}")
     private String prefix;
 
-    @Value("${shuaicj.security.jwt.expiration:#{24*60*60}}")
+    @Value("${shuaicj.security.jwt.expiration:#{24*60*60*1000}}")
     private int expiration; // default 24 hours
 
     @Value("${shuaicj.security.jwt.secret}")

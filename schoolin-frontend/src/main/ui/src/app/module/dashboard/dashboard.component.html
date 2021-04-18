@@ -5,15 +5,15 @@
   </div>
 </div>
 <div fxFlex class="content-wrapper">
-  <div class="content">
+  <div class="main-body">
     <div>
       <div class="p-grid p-nogutter">
         <div class="card-no-size">
           <div>
-            <textarea rows="5" cols="30" pInputTextarea autoResize="'false'" style="width: 100%;resize: none;"></textarea>
+            <textarea rows="5" cols="30" pInputTextarea autoResize="'false'" style="width: 100%;resize: none;" [(ngModel)]="message"></textarea>
           </div>
           <div class="p-d-flex p-jc-end" style="margin-top: 10px;">
-            <button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-outlined" label="Post"></button>
+            <button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-outlined" label="Post" (click)="post()"></button>
           </div>
         </div>
       </div>
@@ -42,3 +42,4 @@
     </app-sidebar>
   </div>
 </div>
+<p-toast></p-toast>

@@ -4,13 +4,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule  } from '@angular/common';
 import {RippleModule} from 'primeng/ripple';
 import {ButtonModule} from 'primeng/button';
+import {ToastModule} from 'primeng/toast';
+import { FormsModule } from '@angular/forms';
 
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { RequestInterceptor } from '../../helpers/request.interceptor';
 import { SharedModule } from '../../shared/shared.module';
-
-
 import { DefaultRoutingModule } from './default-routing.module';
 
 import { DefaultComponent } from './default.component';
@@ -19,8 +19,10 @@ import { NetworkComponent } from './../../../module/network/network.component';
 import { MessageComponent } from 'src/app/module/message/message.component';
 import { NotificationComponent } from 'src/app/module/notification/notification.component';
 import { AccountComponent } from 'src/app/module/account/account.component';
+import { NotesComponent } from 'src/app/module/notes/notes.component';
 
 import { PhotosService } from '../../../services/photos.service';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
 	declarations: [
@@ -29,13 +31,16 @@ import { PhotosService } from '../../../services/photos.service';
     NetworkComponent,
     MessageComponent,
     NotificationComponent,
-    AccountComponent
+    AccountComponent,
+    NotesComponent
 	],
 	imports: [
 		CommonModule,
 		HttpClientModule,
     RippleModule,
     ButtonModule,
+    ToastModule,
+    FormsModule,
 		SharedModule,
 		RouterModule,
 		FlexLayoutModule,
@@ -44,6 +49,7 @@ import { PhotosService } from '../../../services/photos.service';
 	exports: [
 	],
 	providers: [
+    MessageService,
 		PhotosService,
 		{ provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true },
 	],
