@@ -1,0 +1,111 @@
+<header>
+  <div style="position: 'fixed'; top: '0px'; width: 1130px; height: 62px">
+    <p-toolbar>
+      <div class="ui-toolbar-group-left">
+        <div class="logo-container" (click)="home()" style="cursor: pointer">
+          <span class="logo-text"> inse </span>
+        </div>
+      </div>
+      <div>
+        <div style="margin-right: 10px; float: left; cursor: pointer">
+          <div
+            routerLink="/s/dashboard"
+            style="outline: none; display: grid; justify-items: center"
+          >
+            <i class="pi home-icon"></i>
+            <div>Home</div>
+          </div>
+        </div>
+        <div style="margin-right: 10px; float: left; cursor: pointer">
+          <div
+            routerLink="/s/notes"
+            style="outline: none; display: grid; justify-items: center"
+          >
+            <i class="pi notes-icon"></i>
+            <div>Notes</div>
+          </div>
+        </div>
+        <div style="margin-right: 10px; float: left; cursor: pointer">
+          <div
+            routerLink="/s/network"
+            style="outline: none; display: grid; justify-items: center"
+          >
+            <i class="pi network-icon"></i>
+            <div>My Network</div>
+          </div>
+        </div>
+        <div style="margin-right: 10px; float: left; cursor: pointer">
+          <div
+            routerLink="/s/message"
+            style="outline: none; display: grid; justify-items: center"
+          >
+            <i class="pi message-icon"></i>
+            <div>Messages</div>
+          </div>
+        </div>
+        <div style="margin-right: 10px; float: left; cursor: pointer">
+          <div
+            routerLink="/s/notification"
+            style="outline: none; display: grid; justify-items: center"
+          >
+            <i class="pi notification-icon"></i>
+            <div>Notifications</div>
+          </div>
+        </div>
+        <div style="margin-right: 10px; float: left; cursor: pointer">
+          <div
+            routerLink="/s/account"
+            style="outline: none; display: grid; justify-items: center"
+          >
+            <i class="pi account-icon"></i>
+            <div>Account</div>
+          </div>
+        </div>
+      </div>
+      <div class="ui-toolbar-group-right">
+        <div style="cursor: pointer">
+          {{ "User Name" }}
+          <i
+            class="pi pi-angle-down"
+            style="cursor: pointer"
+            (click)="op.toggle($event)"
+          ></i>
+        </div>
+        <p-overlayPanel
+          #op
+          [dismissable]="true"
+          [showCloseIcon]="false"
+          [appendTo]="'body'"
+          styleClass="top-menu"
+          [style]="{ 'z-index': '99999 !important' }"
+        >
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: start;
+              align-items: start;
+            "
+            class="box"
+          >
+            <span class="fa fa-fw settings-icon"></span>
+            <div class="ui-g-4">Settings</div>
+          </div>
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: start;
+              align-items: start;
+            "
+            (click)="logout()"
+            class="box"
+          >
+            <span class="fa fa-fw logout-icon"></span>
+            <div class="ui-g-4">Logout</div>
+          </div>
+        </p-overlayPanel>
+      </div>
+    </p-toolbar>
+  </div>
+</header>
