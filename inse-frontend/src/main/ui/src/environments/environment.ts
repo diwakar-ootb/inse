@@ -9,6 +9,10 @@ export const environment = {
   PHOTOS_PROGRESS_URL: SECURED_URL_PREFIX + '/photos/progress',
   POSTS_URL: SECURED_URL_PREFIX + '/posts/load',
   POSTS_STREAM_URL: SECURED_URL_PREFIX + '/posts/stream',
-  POSTS_SAVE_URL: SECURED_URL_PREFIX + '/posts'
-
+  POSTS_SAVE_URL: SECURED_URL_PREFIX + '/posts',
+  NOTIFICATIONS_STREAM_URL: SECURED_URL_PREFIX + '/notifications/stream',
+  MESSAGES_STREAM_URL: SECURED_URL_PREFIX + '/messages/stream',
+  MESSAGE_GET_URL: SECURED_URL_PREFIX + '/messages/',
+  NETWORK_STREAM_URL: SECURED_URL_PREFIX + '/network/stream',
+  NETWORK_EXPLORE_URL: SECURED_URL_PREFIX + '/network/explore',
 };
