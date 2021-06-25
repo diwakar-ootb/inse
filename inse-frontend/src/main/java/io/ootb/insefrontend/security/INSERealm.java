@@ -23,16 +23,16 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Component
-public class inseRealm extends AuthorizingRealm {
+public class INSERealm extends AuthorizingRealm {
 
     @Autowired
     private UserDAO userDAO;
 
-    public inseRealm() {
+    public INSERealm() {
         super();
         this.setAuthorizationCachingEnabled(false);
     }
-    
+
     AuthorizationInfo getAuthorizationInfo(Subject subject) {
         return doGetAuthorizationInfo(subject.getPrincipals());
     }
@@ -42,15 +42,16 @@ public class inseRealm extends AuthorizingRealm {
 
         log.debug("Getting authorization information for principles " + principals);
 
-        //User u = (User) getAvailablePrincipal(principals);
-        //Optional<User> pu = userDAO.findByUsername(u.getId());
+        // User u = (User) getAvailablePrincipal(principals);
+        // Optional<User> pu = userDAO.findByUsername(u.getId());
         SimpleAuthorizationInfo authInfo = new SimpleAuthorizationInfo();
 
         return authInfo;
     }
 
     @Override
-    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
+    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken)
+            throws AuthenticationException {
         log.debug("Getting authorization information for authentication token " + authenticationToken);
         if (authenticationToken instanceof UsernamePasswordToken) {
             UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;

@@ -34,15 +34,15 @@ import lombok.extern.slf4j.Slf4j;
 public class JwtUsernamePasswordAuthFilter extends OncePerRequestFilter {
 
 	private final JwtConfig config;
-	private final inseRealm realm;
+	private final INSERealm realm;
 	private final ObjectMapper mapper;
 
 	@Autowired
 	private JwtUtil jwtUtil;
 
-	public JwtUsernamePasswordAuthFilter(JwtConfig config, inseRealm realm) {
+	public JwtUsernamePasswordAuthFilter(JwtConfig config, INSERealm realm) {
 		this.config = config;
-		this.realm = (inseRealm) realm;
+		this.realm = (INSERealm) realm;
 		this.mapper = new ObjectMapper();
 	}
 

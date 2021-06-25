@@ -26,7 +26,7 @@ public class SecurityBeanConfig {
 	public JwtConfig jwtConfig() {
 		return new JwtConfig();
 	}
-	
+
 	@Bean
 	public JwtUtil jwtUtil(JwtConfig config) {
 		return new JwtUtil(config);
@@ -34,7 +34,7 @@ public class SecurityBeanConfig {
 
 	@Bean
 	public JwtUsernamePasswordAuthFilter jwtUsernamePasswordAuthFilter(JwtConfig config,
-			@Qualifier("inseRealm") inseRealm realm) {
+			@Qualifier("inseRealm") INSERealm realm) {
 		return new JwtUsernamePasswordAuthFilter(config, realm);
 	}
 
