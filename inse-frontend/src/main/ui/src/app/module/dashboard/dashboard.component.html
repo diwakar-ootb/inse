@@ -1,7 +1,6 @@
 <div>
   <div class="sticky-content">
-    <app-sidebar fxFlex="300px">
-    </app-sidebar>
+    <app-sidebar fxFlex="190px"> </app-sidebar>
   </div>
 </div>
 <div fxFlex class="content-wrapper">
@@ -10,10 +9,25 @@
       <div class="p-grid p-nogutter">
         <div class="card-no-size">
           <div>
-            <textarea rows="5" cols="30" pInputTextarea autoResize="'false'" style="width: 100%;resize: none;" [(ngModel)]="message"></textarea>
+            <textarea
+              rows="5"
+              cols="30"
+              pInputTextarea
+              autoResize="'false'"
+              style="width: 100%; resize: none"
+              [(ngModel)]="message"
+            ></textarea>
           </div>
-          <div class="p-d-flex p-jc-end" style="margin-top: 10px;">
-            <button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-outlined" label="Post" (click)="post()"></button>
+          <div class="p-d-flex p-jc-end" style="margin-top: 10px">
+            <button
+              pButton
+              pRipple
+              type="button"
+              icon="pi pi-check"
+              class="p-button-rounded p-button-outlined"
+              label="Post"
+              (click)="post()"
+            ></button>
           </div>
         </div>
       </div>
@@ -26,6 +40,24 @@
             <div class="content">
               <span>{{ item.description }}</span>
             </div>
+            <div class="footer">
+              <div
+                style="
+                  display: grid;
+                  grid-auto-flow: column;
+                  align-items: end;
+                  justify-items: end;
+                  padding: 5px;
+                  align-content: end;
+                  justify-content: end;
+                  grid-gap: 14px;
+                "
+              >
+                <span class="link-action-item">Like</span>
+                <span class="link-action-item">Comment</span>
+                <span class="link-action-item">Share</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -34,12 +66,10 @@
 </div>
 <div>
   <div class="non-sticky-content">
-    <app-sidebar fxFlex="300px">
-    </app-sidebar>
+    <app-sidebar fxFlex="300px"> </app-sidebar>
   </div>
-  <div class="sticky-content">
-    <app-sidebar fxFlex="300px">
-    </app-sidebar>
+  <div class="sticky-content no-top-margin">
+    <app-sidebar fxFlex="300px"> </app-sidebar>
   </div>
 </div>
 <p-toast></p-toast>

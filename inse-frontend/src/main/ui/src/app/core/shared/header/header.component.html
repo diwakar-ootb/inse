@@ -3,105 +3,100 @@
     <p-toolbar>
       <div class="ui-toolbar-group-left">
         <div class="logo-container" (click)="home()" style="cursor: pointer">
-          <span class="logo-text"> inse </span>
+          <span class="logo-text"> Schoolin </span>
         </div>
       </div>
       <div>
         <div style="margin-right: 10px; float: left; cursor: pointer">
           <div
             routerLink="/s/dashboard"
-            style="outline: none; display: grid; justify-items: center"
+            class="header-menu"
+            [routerLinkActive]="['active-header-menu']"
           >
             <i class="pi home-icon"></i>
-            <div>Home</div>
+            <div class="header-menu-text">Home</div>
           </div>
         </div>
         <div style="margin-right: 10px; float: left; cursor: pointer">
           <div
             routerLink="/s/notes"
-            style="outline: none; display: grid; justify-items: center"
+            class="header-menu"
+            [routerLinkActive]="['active-header-menu']"
           >
             <i class="pi notes-icon"></i>
-            <div>Notes</div>
+            <div class="header-menu-text">Notes</div>
           </div>
         </div>
         <div style="margin-right: 10px; float: left; cursor: pointer">
           <div
             routerLink="/s/network"
-            style="outline: none; display: grid; justify-items: center"
+            class="header-menu"
+            [routerLinkActive]="['active-header-menu']"
           >
             <i class="pi network-icon"></i>
-            <div>My Network</div>
+            <div class="header-menu-text">My Network</div>
           </div>
         </div>
         <div style="margin-right: 10px; float: left; cursor: pointer">
           <div
             routerLink="/s/message"
-            style="outline: none; display: grid; justify-items: center"
+            class="header-menu"
+            [routerLinkActive]="['active-header-menu']"
           >
             <i class="pi message-icon"></i>
-            <div>Messages</div>
+            <div class="header-menu-text">Messages</div>
           </div>
         </div>
         <div style="margin-right: 10px; float: left; cursor: pointer">
           <div
             routerLink="/s/notification"
-            style="outline: none; display: grid; justify-items: center"
+            class="header-menu"
+            [routerLinkActive]="['active-header-menu']"
           >
             <i class="pi notification-icon"></i>
-            <div>Notifications</div>
-          </div>
-        </div>
-        <div style="margin-right: 10px; float: left; cursor: pointer">
-          <div
-            routerLink="/s/account"
-            style="outline: none; display: grid; justify-items: center"
-          >
-            <i class="pi account-icon"></i>
-            <div>Account</div>
+            <div class="header-menu-text">Notifications</div>
           </div>
         </div>
       </div>
       <div class="ui-toolbar-group-right">
-        <div style="cursor: pointer">
-          {{ "User Name" }}
-          <i
-            class="pi pi-angle-down"
-            style="cursor: pointer"
-            (click)="op.toggle($event)"
-          ></i>
+        <div
+          style="
+            cursor: pointer;
+            display: grid;
+            grid-auto-flow: row;
+            justify-items: start;
+            align-items: start;
+          "
+          (click)="op.toggle($event)"
+        >
+          <div
+            style="
+              display: grid;
+              grid-auto-flow: column;
+              justify-items: center;
+              align-items: center;
+            "
+          >
+            <i class="pi account-icon"></i>
+            <i class="pi pi-angle-down" style="cursor: pointer"></i>
+          </div>
+          <div class="header-menu-text">MySelf</div>
         </div>
         <p-overlayPanel
           #op
           [dismissable]="true"
           [showCloseIcon]="false"
           [appendTo]="'body'"
-          styleClass="top-menu"
+          styleClass="header-dropdown"
           [style]="{ 'z-index': '99999 !important' }"
         >
-          <div
-            style="
-              display: flex;
-              flex-direction: row;
-              justify-content: start;
-              align-items: start;
-            "
-            class="box"
-          >
-            <span class="fa fa-fw settings-icon"></span>
+          <div class="header-dropdown-box">
+            <div class="ui-g-4" routerLink="/s/account">Profile</div>
+          </div>
+          <div class="header-dropdown-box">
             <div class="ui-g-4">Settings</div>
           </div>
-          <div
-            style="
-              display: flex;
-              flex-direction: row;
-              justify-content: start;
-              align-items: start;
-            "
-            (click)="logout()"
-            class="box"
-          >
-            <span class="fa fa-fw logout-icon"></span>
+          <div class="header-dropdown-box" (click)="logout()">
             <div class="ui-g-4">Logout</div>
           </div>
         </p-overlayPanel>

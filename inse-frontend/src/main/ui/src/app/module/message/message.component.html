@@ -1,25 +1,50 @@
-<div>
-  <div class="sticky-content">
-    <app-sidebar fxFlex="300px">
-    </app-sidebar>
-  </div>
-</div>
 <div fxFlex class="content-wrapper">
-  <div class="main-body">
-    <div>
-      <div class="p-grid p-nogutter">
-        <p>message works!</p>
+  <div
+    class="main-body highlight"
+    style="
+      min-height: calc(100vh - 100px);
+      display: grid;
+      grid-auto-flow: column;
+    "
+  >
+    <div style="border-right: 1px solid #dedede" fxFlex="320px">
+      <div
+        style="
+          border-bottom: 1px solid #dedede;
+          display: grid;
+          grid-auto-flow: column;
+          justify-items: end;
+          padding: 10px;
+        "
+      >
+        <button
+          pButton
+          pRipple
+          type="button"
+          icon="pi pi-pencil"
+          class="p-button-rounded p-button-outlined"
+        ></button>
+      </div>
+      <div>
+        <div fxFlex="300px" style="background-color: #fff">
+          <div class="p-col-12" *ngFor="let item of list">
+            <div class="notification-card" (click)="loadMessage(item)">
+              <div class="header">{{ item.subject }}</div>
+              <div class="content">
+                <span>{{ item.body }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<div>
-  <div class="non-sticky-content">
-    <app-sidebar fxFlex="300px">
-    </app-sidebar>
-  </div>
-  <div class="sticky-content">
-    <app-sidebar fxFlex="300px">
-    </app-sidebar>
+    <div style="padding-left: 20px">
+      <div style="padding-top: 20px">
+        {{ message?.subject }}
+      </div>
+      <div style="padding-top: 20px">
+        {{ message?.body }}
+      </div>
+    </div>
   </div>
 </div>

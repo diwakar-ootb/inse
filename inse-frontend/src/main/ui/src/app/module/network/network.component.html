@@ -1,43 +1,168 @@
 <div>
   <div class="sticky-content">
-    <app-sidebar fxFlex="300px">
-    </app-sidebar>
+    <div fxFlex="190px" class="list-items-wrapper">
+      <div
+        class="list-items"
+        (click)="network()"
+        routerLinkActive="list-items-highlight"
+      >
+        My Network
+      </div>
+      <div
+        class="list-items"
+        (click)="explore()"
+        routerLinkActive="list-items-highlight"
+      >
+        Explore
+      </div>
+      <div class="list-items">My Contacts</div>
+    </div>
   </div>
 </div>
-<div fxFlex class="content-wrapper">
+<div fxFlex class="content-wrapper" *ngIf="list && list.length > 0">
   <div class="main-body highlight">
-    <div>
+    <div style="padding-top: 20px">
       <div class="p-grid p-nogutter">
         <h2>You Invitations</h2>
       </div>
-      <div style="margin-top: 20px; margin-bottom: 20px; display: grid; grid-template-columns: repeat(auto-fill, 186px); grid-gap: 10px;">
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px"></div>
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px"></div>
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px;"></div>
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px;"></div>
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px;"></div>
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px;"></div>
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px;"></div>
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px;"></div>
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px;"></div>
+      <div
+        style="
+          margin-top: 20px;
+          margin-bottom: 20px;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, 186px);
+          grid-gap: 10px;
+        "
+      >
+        <div
+          style="
+            height: 60px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            display: grid;
+            grid-auto-flow: column;
+            align-items: end;
+            justify-items: end;
+            padding: 5px;
+            align-content: end;
+            justify-content: end;
+            grid-gap: 4px;
+          "
+        >
+          <button
+            pButton
+            pRipple
+            type="button"
+            icon="pi pi-times"
+            class="p-button-rounded p-button-outlined"
+          ></button>
+          <button
+            pButton
+            pRipple
+            type="button"
+            icon="pi pi-pencil"
+            class="p-button-rounded p-button-outlined"
+          ></button>
+        </div>
+        <div
+          style="
+            height: 60px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            display: grid;
+            grid-auto-flow: column;
+            align-items: end;
+            justify-items: end;
+            padding: 5px;
+            align-content: end;
+            justify-content: end;
+            grid-gap: 4px;
+          "
+        >
+          <button
+            pButton
+            pRipple
+            type="button"
+            icon="pi pi-times"
+            class="p-button-rounded p-button-outlined"
+          ></button>
+          <button
+            pButton
+            pRipple
+            type="button"
+            icon="pi pi-pencil"
+            class="p-button-rounded p-button-outlined"
+          ></button>
+        </div>
+        <div
+          style="height: 60px; border: 1px solid #ccc; border-radius: 8px"
+        ></div>
+        <div
+          style="height: 60px; border: 1px solid #ccc; border-radius: 8px"
+        ></div>
+        <div
+          style="height: 60px; border: 1px solid #ccc; border-radius: 8px"
+        ></div>
+        <div
+          style="height: 60px; border: 1px solid #ccc; border-radius: 8px"
+        ></div>
+        <div
+          style="height: 60px; border: 1px solid #ccc; border-radius: 8px"
+        ></div>
+        <div
+          style="height: 60px; border: 1px solid #ccc; border-radius: 8px"
+        ></div>
+        <div
+          style="height: 60px; border: 1px solid #ccc; border-radius: 8px"
+        ></div>
       </div>
     </div>
   </div>
   <div class="main-body highlight">
-    <div>
+    <div style="padding-top: 20px">
       <div class="p-grid p-nogutter">
-        <h2>Network you may explore</h2>
+        <h2>My Current Network</h2>
       </div>
-      <div style="margin-top: 20px; margin-bottom: 20px; display: grid; grid-template-columns: repeat(auto-fill, 186px); grid-gap: 10px;">
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px"></div>
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px"></div>
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px;"></div>
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px;"></div>
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px;"></div>
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px;"></div>
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px;"></div>
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px;"></div>
-        <div style="height: 300px; border: 1px solid #ccc; border-radius: 8px;"></div>
+      <div
+        style="
+          margin-top: 20px;
+          margin-bottom: 20px;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, 186px);
+          grid-gap: 10px;
+        "
+        *ngIf="list && list.length > 0"
+      >
+        <div *ngFor="let item of list">
+          <div class="box-item">{{ item.firstName }} {{ item.lastName }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  fxFlex
+  class="content-wrapper"
+  *ngIf="exploreConnections && exploreConnections.length > 0"
+>
+  <div class="main-body highlight">
+    <div style="padding-top: 20px">
+      <div class="p-grid p-nogutter">
+        <h2>New Connections</h2>
+      </div>
+      <div
+        style="
+          margin-top: 20px;
+          margin-bottom: 20px;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, 186px);
+          grid-gap: 10px;
+        "
+        *ngIf="exploreConnections && exploreConnections.length > 0"
+      >
+        <div *ngFor="let item of exploreConnections">
+          <div class="box-item">{{ item.firstName }} {{ item.lastName }}</div>
+        </div>
       </div>
     </div>
   </div>
